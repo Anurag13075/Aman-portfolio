@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aman Sharma — Curriculum Vitae (Resume)</title>
-  
-  <!-- Modern Clean Typography -->
+  <title>Aman Sharma — Resume (Curriculum Vitae)</title>
+  <meta name="description" content="Resume of Aman Sharma — Junior Accountant & Banking Operations Professional." />
+
+  <!-- Modern Clean Typography: Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -22,23 +23,32 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ['"Poppins"', 'sans-serif'],
-            body: ['"Inter"', 'sans-serif'],
+            sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
           },
           colors: {
-            navy: {
-              950: '#07111E',
-              900: '#0B1F3A',
-              850: '#11294D',
-              800: '#173663',
+            dark: {
+              bg: '#0c0c0e',
+              card: '#131316',
+              cardHover: '#18181c',
+              border: '#1f1f24',
+              borderMuted: '#17171b',
+              text: '#ededef',
+              muted: '#8e8e99',
+              dim: '#5b5b66',
             },
-            teal: {
-              600: '#0D9488',
-              700: '#0F766E',
-              800: '#115E59',
+            light: {
+              bg: '#fafafa',
+              card: '#ffffff',
+              cardHover: '#f4f4f5',
+              border: '#e4e4e7',
+              borderMuted: '#f0f0f2',
+              text: '#111113',
+              muted: '#63636e',
+              dim: '#a1a1aa',
             },
-            slate: {
-              850: '#151F30',
+            accent: {
+              emerald: '#10b981',
             }
           }
         }
@@ -47,412 +57,154 @@
   </script>
 
   <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* PDF Viewport fills remainder of the screen */
+    .pdf-viewer-frame {
+      width: 100%;
+      height: calc(100vh - 56px);
+      border: 0;
+      display: block;
+      background: #525659;
+    }
+
     @media print {
-      body {
-        background: #ffffff !important;
-        color: #0f172a !important;
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-      .no-print {
-        display: none !important;
-      }
-      .print-shadow-none {
-        box-shadow: none !important;
-        border: none !important;
-        margin: 0 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-      }
-      @page {
-        size: A4;
-        margin: 8mm 10mm;
-      }
-      * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-      }
-    }
-
-    /* Screen A4 container styling */
-    .resume-sheet {
-      width: 210mm;
-      min-height: 297mm;
-    }
-    @media (max-width: 215mm) {
-      .resume-sheet {
-        width: 100%;
-        min-height: auto;
-      }
-    }
-
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(to right, #e2e8f0, transparent);
-    }
-
-    .skill-badge {
-      display: inline-block;
-      padding: 0.375rem 0.75rem;
-      background: #f0f2f8;
-      border-radius: 0.375rem;
-      font-size: 0.8125rem;
-      color: #1e2f7a;
-      font-weight: 500;
-      border: 1px solid #e2e8f0;
-      transition: all 0.2s;
-    }
-
-    .skill-badge:hover {
-      background: #e0e7ff;
-      border-color: #3b5bdb;
-    }
-
-    .accent-dot {
-      display: inline-block;
-      width: 4px;
-      height: 4px;
-      background: #3b5bdb;
-      border-radius: 50%;
-      margin-right: 8px;
-      margin-top: 2px;
+      .no-print { display: none !important; }
+      .pdf-viewer-frame { height: 100% !important; }
     }
   </style>
 </head>
-<body class="bg-slate-100 font-sans text-slate-800 antialiased selection:bg-slate-800 selection:text-white">
+<body class="bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text antialiased transition-colors duration-200 h-screen flex flex-col overflow-hidden">
 
-  <!-- ==================== TOP ACTION BAR (Hidden in Print) ==================== -->
-  <header class="no-print sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 px-4 py-3 shadow-sm">
-    <div class="max-w-4xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors">
-          <i data-lucide="arrow-left" class="w-4 h-4"></i>
-          <span>Back to Portfolio</span>
-        </a>
-        <span class="text-slate-300">|</span>
-        <span class="text-xs font-mono font-medium text-slate-500">Aman Sharma — Executive CV</span>
+  <!-- ==================== MINIMAL SLEEK HEADER ==================== -->
+  <header class="no-print h-14 shrink-0 bg-light-bg/95 dark:bg-dark-bg/95 backdrop-blur-md border-b border-light-border dark:border-dark-border px-4 sm:px-6 flex items-center justify-between z-20">
+    
+    <!-- Left: Back Navigation & Profile Tag -->
+    <div class="flex items-center gap-3 sm:gap-4 min-w-0">
+      <a href="index.html" class="inline-flex items-center gap-1.5 text-xs font-mono text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text transition-colors group shrink-0">
+        <i data-lucide="arrow-left" class="w-4 h-4 group-hover:-translate-x-0.5 transition-transform"></i>
+        <span>Portfolio</span>
+      </a>
+
+      <span class="text-light-border dark:text-dark-border">|</span>
+
+      <div class="flex items-center gap-2.5 min-w-0">
+        <div class="relative w-7 h-7 rounded-full overflow-hidden ring-1 ring-light-border dark:ring-dark-border shrink-0">
+          <img src="aman-sharma.jpg" alt="Aman Sharma" class="w-full h-full object-cover object-top" />
+          <span class="absolute bottom-0 right-0 w-2 h-2 bg-emerald-500 border border-dark-bg rounded-full"></span>
+        </div>
+        <div class="min-w-0">
+          <div class="flex items-center gap-1.5 leading-none">
+            <span class="font-semibold text-xs text-light-text dark:text-dark-text truncate">Aman Sharma</span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-mono hidden sm:inline">FlowCV Resume</span>
+          </div>
+          <div class="text-[10px] text-light-dim dark:text-dark-dim font-mono truncate hidden md:block mt-0.5">
+            Junior Accountant • Banking Operations
+          </div>
+        </div>
       </div>
-
-      <div class="flex items-center gap-2">
-        <button onclick="window.print()" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-navy-900 hover:bg-navy-800 text-white text-xs font-semibold shadow-sm transition-all">
-          <i data-lucide="printer" class="w-4 h-4"></i>
-          <span>Print / Save as PDF</span>
-        </button>
-      </div>
-
     </div>
+
+    <!-- Right: Actions & Download -->
+    <div class="flex items-center gap-2 shrink-0">
+      <!-- Theme Switcher -->
+      <button id="theme-toggle" aria-label="Toggle theme" class="p-1.5 rounded text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text border border-transparent hover:border-light-border dark:hover:border-dark-border transition-colors">
+        <i id="theme-icon" data-lucide="moon" class="w-4 h-4"></i>
+      </button>
+
+      <!-- Open in New Tab -->
+      <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-light-border dark:border-dark-border text-light-text dark:text-dark-text hover:bg-light-cardHover dark:hover:bg-dark-cardHover text-xs font-medium transition-colors">
+        <i data-lucide="external-link" class="w-3.5 h-3.5 text-light-muted dark:text-dark-muted"></i>
+        <span class="hidden sm:inline">Open in Tab</span>
+      </a>
+
+      <!-- Download Button -->
+      <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf"
+         class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-black text-xs font-semibold shadow-sm transition-all">
+        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+        <span>Download PDF</span>
+      </a>
+    </div>
+
   </header>
 
-  <!-- ==================== RESUME DOCUMENT CONTAINER ==================== -->
-  <main class="py-6 sm:py-10 px-2 sm:px-4 flex justify-center">
-    
-    <div class="resume-sheet bg-white border border-slate-200 shadow-xl rounded-xl sm:rounded-2xl overflow-hidden print-shadow-none">
+  <!-- ==================== NEW UPLOADED PDF RESUME ONLY ==================== -->
+  <main class="flex-1 w-full relative bg-neutral-900 overflow-hidden">
+    <object
+      data="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf#toolbar=1&navpanes=0&view=FitH"
+      type="application/pdf"
+      class="pdf-viewer-frame"
+      aria-label="Aman Sharma FlowCV Resume (PDF)">
       
-      <!-- HEADER BAND -->
-      <header class="bg-gradient-to-r from-navy-900 via-navy-850 to-slate-900 text-white p-6 sm:p-8 border-b-4 border-teal-600">
-        <div class="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-          
-          <!-- Avatar Photo with Elegant Double Ring -->
-          <div class="relative shrink-0">
-            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-white/20 shadow-lg bg-navy-950">
-              <img src="aman-sharma.jpg" alt="Aman Sharma" class="w-full h-full object-cover object-top" />
-            </div>
-            <div class="absolute bottom-1 right-1 w-5 h-5 rounded-full bg-emerald-500 ring-2 ring-navy-900 flex items-center justify-center text-white" title="Available for Roles">
-              <i data-lucide="check" class="w-3 h-3 stroke-[3]"></i>
-            </div>
-          </div>
-
-          <!-- Name & Executive Headline -->
-          <div class="flex-1 text-center sm:text-left space-y-2">
-            <div class="flex flex-col sm:flex-row sm:items-baseline gap-2">
-              <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-white font-sans">
-                Aman Sharma
-              </h1>
-              <span class="text-xs font-mono text-teal-300 font-medium">Bhopal, India</span>
-            </div>
-            
-            <p class="text-sm sm:text-base font-semibold text-teal-400 tracking-wide">
-              Junior Accountant | Banking &amp; Finance Operations
-            </p>
-
-            <p class="text-xs sm:text-[13px] text-slate-300 font-normal leading-relaxed pt-1 max-w-2xl">
-              Recent Bachelor of Business Administration graduate with hands-on experience in bank reconciliation, invoice processing, and month-end accounting operations at RMJ Motors. Proficient in Tally Prime and Advanced Excel with demonstrated ability to support audit processes and GST compliance. Seeking a junior accountant or banking operations role to build expertise in financial management and banking sector operations.
-            </p>
-          </div>
-
-        </div>
-
-        <!-- Contact Quick Strip -->
-        <div class="mt-5 pt-4 border-t border-white/10 flex flex-wrap items-center justify-center sm:justify-start gap-y-2 gap-x-5 text-xs text-slate-300 font-mono">
-          <a href="tel:+919301959874" class="flex items-center gap-1.5 hover:text-teal-300 transition-colors">
-            <i data-lucide="phone" class="w-3.5 h-3.5 text-teal-400"></i>
-            <span>+91 9301959874</span>
-          </a>
-          <a href="mailto:as9301959874@gmail.com" class="flex items-center gap-1.5 hover:text-teal-300 transition-colors">
-            <i data-lucide="mail" class="w-3.5 h-3.5 text-teal-400"></i>
-            <span>as9301959874@gmail.com</span>
-          </a>
-          <div class="flex items-center gap-1.5">
-            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-teal-400"></i>
-            <span>Bhopal, Madhya Pradesh, India</span>
-          </div>
-          <a href="https://aman-portfolio-delta-seven.vercel.app" target="_blank" class="flex items-center gap-1.5 hover:text-teal-300 transition-colors">
-            <i data-lucide="globe" class="w-3.5 h-3.5 text-teal-400"></i>
-            <span>Portfolio Website</span>
-          </a>
-        </div>
-      </header>
-
-      <!-- TWO-COLUMN CONTENT GRID -->
-      <div class="grid grid-cols-1 md:grid-cols-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
+      <!-- Embedded iframe fallback -->
+      <iframe
+        src="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf#toolbar=1&navpanes=0&view=FitH"
+        class="pdf-viewer-frame"
+        title="Aman Sharma Resume">
         
-        <!-- ==================== LEFT COLUMN (4 Cols: Education, Skills, Interests) ==================== -->
-        <aside class="md:col-span-5 p-6 sm:p-7 bg-slate-50/70 space-y-6">
-          
-          <!-- EDUCATION -->
-          <section class="space-y-3">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="graduation-cap" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Education</h2>
-            </div>
-
-            <div class="space-y-1">
-              <h3 class="text-xs font-bold text-slate-900 leading-snug">Bachelor of Business Administration (BBA)</h3>
-              <p class="text-xs font-medium text-teal-700">Technocrats Institute of Commerce and Science, Bhopal</p>
-              <div class="flex items-center justify-between text-[11px] text-slate-500 font-mono pt-0.5">
-                <span>06/2023 – 09/2025</span>
-                <span>Bhopal, India</span>
-              </div>
-              <p class="text-[11px] text-slate-600 leading-relaxed pt-1">
-                Comprehensive business degree with focus on accounting, finance, and business management, completed over 3 years of coursework.
-              </p>
-            </div>
-
-            <!-- Relevant Coursework -->
-            <div class="pt-1.5">
-              <div class="text-[11px] font-semibold text-slate-700 mb-1">Key Academic Modules:</div>
-              <ul class="text-[11px] text-slate-600 space-y-1">
-                <li class="flex items-start gap-1.5">
-                  <span class="text-teal-600 font-bold">•</span>
-                  <span>Specialized in accounting principles and financial reporting</span>
-                </li>
-                <li class="flex items-start gap-1.5">
-                  <span class="text-teal-600 font-bold">•</span>
-                  <span>Studied finance management and business operations</span>
-                </li>
-                <li class="flex items-start gap-1.5">
-                  <span class="text-teal-600 font-bold">•</span>
-                  <span>Developed foundation in GST and Indian tax compliance</span>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- TECHNICAL SKILLS -->
-          <section class="space-y-3">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="wrench" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Technical Skills</h2>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Tally Prime / ERP 9</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">MS Excel (VLOOKUP, Pivot)</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Bank Reconciliation</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Invoice Processing</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Journal Entries</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Month-End Close</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">GST Compliance</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">General Ledger</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Audit Support</span>
-              <span class="px-2 py-1 rounded bg-white border border-slate-200 text-[11px] font-medium text-slate-800 shadow-2xs">Financial Reporting</span>
-            </div>
-          </section>
-
-          <!-- SOFT SKILLS -->
-          <section class="space-y-3">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="user-check" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Soft Skills</h2>
-            </div>
-
-            <div class="flex flex-wrap gap-1.5">
-              <span class="px-2 py-1 rounded bg-teal-50 border border-teal-200 text-[11px] font-medium text-teal-800">Attention to Detail</span>
-              <span class="px-2 py-1 rounded bg-teal-50 border border-teal-200 text-[11px] font-medium text-teal-800">Time Management</span>
-              <span class="px-2 py-1 rounded bg-teal-50 border border-teal-200 text-[11px] font-medium text-teal-800">Precision &amp; Accuracy</span>
-              <span class="px-2 py-1 rounded bg-teal-50 border border-teal-200 text-[11px] font-medium text-teal-800">Effective Communication</span>
-              <span class="px-2 py-1 rounded bg-teal-50 border border-teal-200 text-[11px] font-medium text-teal-800">Team Collaboration</span>
-            </div>
-          </section>
-
-          <!-- KEY BANKING STRENGTHS -->
-          <section class="space-y-2.5">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="shield-check" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Specialized Highlights</h2>
-            </div>
-
-            <div class="space-y-2 text-[11px]">
-              <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-                <div class="font-bold text-slate-900">Accurate Bank Reconciliation</div>
-                <p class="text-slate-600 leading-relaxed">
-                  Reconciled bank statements with the ledger every month and followed up on differences until 100% resolved for month-end readiness.
-                </p>
-              </div>
-
-              <div class="p-2.5 rounded-lg bg-white border border-slate-200 space-y-1">
-                <div class="font-bold text-slate-900">On-Time Payment Processing</div>
-                <p class="text-slate-600 leading-relaxed">
-                  Processed vendor payments, cheques, and fund transfers on schedule with thorough 3-way checks to eliminate duplicate entries.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          <!-- INTERESTS -->
-          <section class="space-y-2">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="heart" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Interests</h2>
-            </div>
-            <div class="flex items-center gap-2 text-[11px] font-medium text-slate-700">
-              <span class="px-2.5 py-1 rounded bg-white border border-slate-200 flex items-center gap-1">
-                <i data-lucide="activity" class="w-3 h-3 text-teal-600"></i>
-                <span>Cricket</span>
-              </span>
-              <span class="px-2.5 py-1 rounded bg-white border border-slate-200 flex items-center gap-1">
-                <i data-lucide="music" class="w-3 h-3 text-teal-600"></i>
-                <span>Singing</span>
-              </span>
-            </div>
-          </section>
-
-        </aside>
-
-        <!-- ==================== RIGHT COLUMN (7 Cols: Work Experience & Impact) ==================== -->
-        <main class="md:col-span-7 p-6 sm:p-7 space-y-6">
-          
-          <!-- WORK EXPERIENCE SECTION -->
-          <section class="space-y-4">
-            <div class="flex items-center justify-between border-b border-slate-200 pb-1.5">
-              <div class="flex items-center gap-2">
-                <i data-lucide="briefcase" class="w-4 h-4 text-teal-700"></i>
-                <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Work Experience</h2>
-              </div>
-              <span class="text-[11px] font-mono text-slate-500">Dealership &amp; Corporate</span>
-            </div>
-
-            <!-- RMJ Motors Role Card -->
-            <div class="space-y-2.5">
-              <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-                <div>
-                  <h3 class="text-sm font-extrabold text-slate-900">Junior Accountant</h3>
-                  <div class="text-xs font-semibold text-teal-700">RMJ Motors</div>
-                </div>
-                <div class="text-right text-[11px] font-mono text-slate-500">
-                  <div>04/2026 – 07/2026</div>
-                  <div>Bhopal, India</div>
-                </div>
-              </div>
-
-              <p class="text-xs text-slate-600 leading-relaxed italic bg-slate-50 p-2.5 rounded-md border border-slate-100">
-                Managed core accounting functions for a vehicle dealership, including bank reconciliation, invoice processing, and month-end close support across retail transaction lines.
-              </p>
-
-              <!-- Accomplishments & Tasks with verified numbers -->
-              <div class="space-y-2 pt-1">
-                <div class="text-[11px] font-bold uppercase tracking-wider text-slate-800 font-mono">Accomplishments &amp; Key Tasks</div>
-                
-                <ul class="space-y-2 text-xs text-slate-700 leading-relaxed">
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Processed vendor and customer invoices monthly</strong>, maintaining <strong>99.8% accuracy</strong> in transaction recording and reducing payment delays by <strong>25%</strong>.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Performed daily bank reconciliation</strong> across 15+ accounts, identifying and resolving discrepancies promptly and improving cash position visibility by <strong>30%</strong>.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Prepared journal entries for month-end close</strong>, supporting on-time financial statement delivery and reducing closing cycle time by <strong>3 days</strong> (from 8 to 5 days).</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Assisted senior accountant with audit document preparation</strong>, assembling voucher verification sets and contributing to successful statutory audit completion with <strong>zero major findings</strong>.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Compiled and organized GST data</strong> for monthly and quarterly reporting periods (GSTR-1, GSTR-3B), ensuring 100% compliance with regulatory requirements.</span>
-                  </li>
-                  <li class="flex items-start gap-2">
-                    <span class="w-1.5 h-1.5 rounded-full bg-teal-600 shrink-0 mt-1.5"></span>
-                    <span><strong>Maintained ledger records in Tally Prime</strong>, eliminating manual reconciliation errors through systematic voucher entry and structured balance sheet verification.</span>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </section>
-
-          <!-- CORE OPERATIONAL VALUE PROPOSITION -->
-          <section class="space-y-3 pt-2">
-            <div class="flex items-center gap-2 border-b border-slate-200 pb-1.5">
-              <i data-lucide="award" class="w-4 h-4 text-teal-700"></i>
-              <h2 class="text-xs font-bold uppercase tracking-wider text-slate-900 font-mono">Professional Competency Summary</h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
-              <div class="p-2.5 rounded-lg border border-slate-200 bg-white space-y-1">
-                <div class="font-bold text-slate-900 flex items-center gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-teal-600"></i>
-                  <span>Ledger Diligence</span>
-                </div>
-                <p class="text-[11px] text-slate-600 leading-normal">Ensures 100% voucher matching and balanced sub-ledgers before closing entries.</p>
-              </div>
-
-              <div class="p-2.5 rounded-lg border border-slate-200 bg-white space-y-1">
-                <div class="font-bold text-slate-900 flex items-center gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-teal-600"></i>
-                  <span>Statutory Compliance</span>
-                </div>
-                <p class="text-[11px] text-slate-600 leading-normal">Rigorous KYC, AML, GST, and TDS withholding calculation compliance.</p>
-              </div>
-
-              <div class="p-2.5 rounded-lg border border-slate-200 bg-white space-y-1">
-                <div class="font-bold text-slate-900 flex items-center gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-teal-600"></i>
-                  <span>Excel Modeling</span>
-                </div>
-                <p class="text-[11px] text-slate-600 leading-normal">Hands-on with Pivot Tables, VLOOKUP, dynamic sums, and reconciliation sheets.</p>
-              </div>
-
-              <div class="p-2.5 rounded-lg border border-slate-200 bg-white space-y-1">
-                <div class="font-bold text-slate-900 flex items-center gap-1.5">
-                  <i data-lucide="check-circle" class="w-3.5 h-3.5 text-teal-600"></i>
-                  <span>Audit Trail Readiness</span>
-                </div>
-                <p class="text-[11px] text-slate-600 leading-normal">Maintains organized physical and digital archives ready for auditor sampling.</p>
-              </div>
-            </div>
-          </section>
-
-          <!-- DECLARATION -->
-          <footer class="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-2 text-[10px] font-mono text-slate-400">
-            <div>Verified Professional Resume • Aman Sharma</div>
-            <div>Bhopal, Madhya Pradesh, India</div>
-          </footer>
-
-        </main>
-
-      </div>
-
-    </div>
-
+        <!-- Touch/device fallback -->
+        <div class="flex flex-col items-center justify-center text-center gap-4 p-8 min-h-full bg-light-card dark:bg-dark-card text-light-text dark:text-dark-text">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <div class="space-y-1">
+            <h3 class="text-sm font-semibold">Aman Sharma — Curriculum Vitae</h3>
+            <p class="text-xs text-light-muted dark:text-dark-muted max-w-sm">
+              Your device or browser does not support embedded PDF viewing. Click below to view or download the resume.
+            </p>
+          </div>
+          <div class="flex items-center gap-2 pt-2">
+            <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" target="_blank"
+               class="px-4 py-2 rounded-lg bg-light-text dark:bg-dark-text text-light-bg dark:text-dark-bg text-xs font-semibold">
+              Open PDF
+            </a>
+            <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf"
+               class="px-4 py-2 rounded-lg bg-emerald-500 text-black text-xs font-semibold">
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </iframe>
+    </object>
   </main>
 
+  <!-- Script for icons and synced theme -->
   <script>
     lucide.createIcons();
+
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+      htmlElement.classList.remove('dark');
+      updateThemeIcon(false);
+    } else {
+      htmlElement.classList.add('dark');
+      updateThemeIcon(true);
+    }
+
+    if (themeToggleBtn) {
+      themeToggleBtn.addEventListener('click', () => {
+        const isDark = htmlElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeIcon(isDark);
+      });
+    }
+
+    function updateThemeIcon(isDark) {
+      if (themeIcon) {
+        themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+        lucide.createIcons();
+      }
+    }
   </script>
 </body>
 </html>
