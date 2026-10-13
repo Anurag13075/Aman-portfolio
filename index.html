@@ -122,6 +122,10 @@
         <a href="#experience" class="hover:text-light-text dark:hover:text-dark-text">Experience</a>
         <a href="#skills" class="hover:text-light-text dark:hover:text-dark-text">Skills</a>
         <a href="#contact" class="hover:text-light-text dark:hover:text-dark-text">Contact</a>
+        <a href="resume.html" class="hover:text-light-text dark:hover:text-dark-text font-medium flex items-center gap-1 text-emerald-500">
+          <span>Resume</span>
+          <span class="text-[9px] px-1 py-0.5 rounded bg-emerald-500/10 text-emerald-500 font-mono">PDF</span>
+        </a>
 
         <!-- Minimal Theme Switcher (Moon/Sun) -->
         <button id="theme-toggle" aria-label="Toggle theme" class="p-1 rounded text-light-muted dark:text-dark-muted hover:text-light-text dark:hover:text-dark-text">
@@ -165,8 +169,12 @@
         <a href="tel:+919301959874" class="hover:text-light-text dark:hover:text-dark-text underline underline-offset-4 decoration-light-border dark:decoration-dark-border hover:decoration-current">
           Phone
         </a>
-        <a href="resume.html" target="_blank" class="hover:text-light-text dark:hover:text-dark-text underline underline-offset-4 decoration-light-border dark:decoration-dark-border hover:decoration-current text-left">
-          Resume (PDF) ↗
+        <a href="resume.html" class="hover:text-light-text dark:hover:text-dark-text underline underline-offset-4 decoration-light-border dark:decoration-dark-border hover:decoration-current text-left inline-flex items-center gap-1">
+          <span>Resume (PDF) ↗</span>
+        </a>
+        <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf" class="text-emerald-500 hover:text-emerald-400 underline underline-offset-4 decoration-emerald-500/30 hover:decoration-current text-left inline-flex items-center gap-1 font-medium">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Download CV</span>
         </a>
       </div>
 
@@ -187,9 +195,20 @@
           </div>
         </div>
         
-        <div class="flex items-center gap-2 text-xs text-light-dim dark:text-dark-dim font-mono">
-          <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
-          <span>Bhopal, Madhya Pradesh, India</span>
+        <div class="flex flex-wrap items-center gap-2.5 text-xs font-mono">
+          <div class="flex items-center gap-1.5 text-light-dim dark:text-dark-dim">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5"></i>
+            <span>Bhopal, MP</span>
+          </div>
+          <span class="text-light-border dark:text-dark-border">|</span>
+          <a href="resume.html" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-light-cardHover dark:bg-dark-border text-light-text dark:text-dark-text hover:border-emerald-500 border border-transparent transition-colors">
+            <i data-lucide="file-text" class="w-3 h-3 text-emerald-500"></i>
+            <span>View Resume</span>
+          </a>
+          <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf" class="inline-flex items-center gap-1 px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-400 hover:bg-emerald-500/20 border border-emerald-500/30 transition-colors">
+            <i data-lucide="download" class="w-3 h-3"></i>
+            <span>Download</span>
+          </a>
         </div>
       </div>
 
@@ -281,8 +300,19 @@
 
     <!-- ==================== EXPERIENCE ==================== -->
     <section id="experience" class="space-y-5">
-      <div class="text-[11px] font-mono tracking-[0.2em] uppercase text-light-dim dark:text-dark-dim">
-        EXPERIENCE
+      <div class="flex items-center justify-between">
+        <div class="text-[11px] font-mono tracking-[0.2em] uppercase text-light-dim dark:text-dark-dim">
+          EXPERIENCE
+        </div>
+        <div class="flex items-center gap-3 text-xs font-mono">
+          <a href="resume.html" class="hover:text-light-text dark:hover:text-dark-text inline-flex items-center gap-1 text-light-muted dark:text-dark-muted underline underline-offset-4 decoration-light-border dark:decoration-dark-border hover:decoration-current">
+            <span>Full CV ↗</span>
+          </a>
+          <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf" class="hover:text-emerald-400 text-emerald-500 inline-flex items-center gap-1 font-medium">
+            <i data-lucide="download" class="w-3 h-3"></i>
+            <span>Download PDF</span>
+          </a>
+        </div>
       </div>
 
       <div class="p-5 rounded-lg border border-light-border dark:border-dark-border bg-light-card dark:bg-dark-card space-y-4">
@@ -529,6 +559,8 @@
     <div class="max-w-3xl mx-auto px-5 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-light-dim dark:text-dark-dim font-mono">
       <div>© 2026 Aman Sharma • Bhopal, India</div>
       <div class="flex items-center gap-4">
+        <a href="resume.html" class="hover:text-light-text dark:hover:text-dark-text flex items-center gap-1"><i data-lucide="file-text" class="w-3.5 h-3.5 text-emerald-500"></i> Resume</a>
+        <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf" class="hover:text-emerald-400 text-emerald-500 flex items-center gap-1 font-medium"><i data-lucide="download" class="w-3.5 h-3.5"></i> Download CV</a>
         <a href="#hero" class="hover:text-light-text dark:hover:text-dark-text">Back to top ↑</a>
       </div>
     </div>
@@ -555,18 +587,18 @@
         <img src="aman-sharma.jpg" alt="Aman Sharma" class="w-10 h-10 rounded object-cover object-top shrink-0" />
         <div class="text-xs overflow-hidden">
           <div class="font-semibold text-light-text dark:text-dark-text truncate">Aman Sharma — Junior Accountant</div>
-          <div class="text-light-dim dark:text-dark-dim font-mono text-[11px]">Bhopal, MP • PDF Document</div>
+          <div class="text-light-dim dark:text-dark-dim font-mono text-[11px]">Bhopal, MP • FlowCV Resume (PDF)</div>
         </div>
       </div>
 
       <div class="flex gap-2">
-        <a href="resume.html" target="_blank" class="flex-1 text-center py-2 px-3 rounded bg-light-text dark:bg-dark-text text-light-bg dark:text-dark-bg font-medium text-xs hover:opacity-90 inline-flex items-center justify-center gap-1.5">
-          <span>Open Full CV</span>
+        <a href="resume.html" class="flex-1 text-center py-2 px-3 rounded bg-light-text dark:bg-dark-text text-light-bg dark:text-dark-bg font-medium text-xs hover:opacity-90 inline-flex items-center justify-center gap-1.5">
+          <span>View Full CV</span>
           <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
         </a>
-        <a href="resume.html" target="_blank" onclick="setTimeout(() => window.open('resume.html', '_blank'), 100)" class="py-2 px-3 rounded border border-light-border dark:border-dark-border text-light-text dark:text-dark-text text-xs hover:bg-light-cardHover dark:hover:bg-dark-border inline-flex items-center justify-center gap-1">
-          <i data-lucide="printer" class="w-3.5 h-3.5"></i>
-          <span>Print / PDF</span>
+        <a href="Aman_Sharma_FlowCV_Resume_2026-10-13.pdf" download="Aman_Sharma_Resume.pdf" class="py-2 px-3 rounded bg-emerald-500 hover:bg-emerald-400 text-black font-semibold text-xs inline-flex items-center justify-center gap-1.5 shadow-sm transition-colors">
+          <i data-lucide="download" class="w-3.5 h-3.5"></i>
+          <span>Download PDF</span>
         </a>
       </div>
     </div>
@@ -684,33 +716,12 @@
     });
 
     function downloadResumePlaceholder() {
-      const text = `AMAN SHARMA - CURRICULUM VITAE
-Role: Junior Accountant | Banking & Financial Operations
-Location: Bhopal, Madhya Pradesh, India
-Email: aman.sharma.finance@email.com
-Phone: +91 98765 43210
-
-EXPERIENCE:
-Junior Accountant — RMJ Motors
-- Cut month-end closing from 8 days to 5 days.
-- Reconciled 15+ bank and ledger accounts monthly.
-- Processed 200+ vendor invoices monthly.
-- Reduced accounts receivable by 20% in six months.
-- Automated Excel workflows saving 6 hours per week.
-- Zero major findings across all audits.
-
-SKILLS:
-Bank Reconciliation, Cash Flow Monitoring, Tally Prime, Advanced MS Excel, GST & TDS, KYC/AML.
-`;
-      const blob = new Blob([text], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
-      a.href = url;
-      a.download = 'Aman_Sharma_CV.txt';
+      a.href = 'Aman_Sharma_FlowCV_Resume_2026-10-13.pdf';
+      a.download = 'Aman_Sharma_Resume.pdf';
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
-      URL.revokeObjectURL(url);
       closeResumeModal();
     }
   </script>
